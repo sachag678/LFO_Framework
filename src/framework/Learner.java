@@ -16,7 +16,8 @@ import lfo.experiments.Config;
 
 public class Learner extends Agent {
 	
-	public Learner(int ignoreTrace, String learnerType, List<String> trainData, int NumPerception, String[] actions, String splitBy ) throws FileNotFoundException, IOException{
+	public Agent newAgent(int ignoreTrace, String learnerType, List<String> trainData, int NumPerception, String[] actions, String splitBy ) throws FileNotFoundException, IOException{
+		
 		//declare and initialize agent
 		int i = ignoreTrace;
 		Agent agent = null;
@@ -47,18 +48,20 @@ public class Learner extends Agent {
 		case "IOHMM":
 			lt.addAll(trainData);
 			lt.remove(i);
-			agent = DiscreteDBNAgent.getIOHMMFromMATLAB(lt,Config.LOCAL_MAP + "Matlab/LfODBN-EVAL_IOHMM",NumPerception);
+			agent = DiscreteDBNAgent.getIOHMMFromMATLAB(lt,Config.LOCAL_MAP + "Matlab/LfODBN-EVAL_IOHMM",NumPerception, (NumPerception+2)*2);
 			break;
 		case "DBN":
 			lt.addAll(trainData);
 			lt.remove(i);
-			agent = DiscreteDBNAgent.getLfODBNFromMATLAB(lt,Config.LOCAL_MAP + "Matlab/LfODBN-EVAL_DBN",NumPerception);
+			agent = DiscreteDBNAgent.getLfODBNFromMATLAB(lt,Config.LOCAL_MAP + "Matlab/LfODBN-EVAL_DBN",NumPerception,(NumPerception+2)*2);
 			break;
 		case "TB":
 			lt.addAll(trainData);
 			agent = new TBAgent(lt,splitBy,i);
 			break;
 		}
+		
+		return agent;
 		
 	}
 
