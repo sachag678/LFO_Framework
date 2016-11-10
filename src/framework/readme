@@ -1,0 +1,9 @@
+This folder contains
+
+-SimulatorModule - runs the experiment
+
+-TestingModule - creates a Learner, takes a trace as an expert and compares the two. Outputs a confusion matrix
+
+-EvaluatorModule - takes a confusionMatrix and evaluates performance
+
+-Learner - creates a Learner based on the type of learning chosen
