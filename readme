@@ -1,0 +1,25 @@
+# LFO_Framework
+Initial Tool created by Santiago Ontanon - santi@cs.drexel.edu, www.cs.drexel.edu/~santi
+Used in paper - 
+Ontañón, S., Montaña, J. L., & Gonzalez, A. J. (2014). 
+A Dynamic-Bayesian Network framework for modeling and evaluating learning from observation. 
+Expert Systems with Applications, 41(11), 5212–5226. http://doi.org/10.1016/j.eswa.2014.02.049
+
+The implementation of Temporal backtracking is from M. W. Floyd and B. Esfandiari, 
+“Learning State-Based Behaviour using Temporally Related Cases,” vol 829, pp. 9–11. Proceedings of the Sixteenth UK Workshop on Case-Based Reasoning, Cambrdige, United Kingdom, December 13, 2011
+
+The BNT tool used is from https://github.com/bayesnet/bnt
+
+The initial tool, the BNET tool box, and the implementation of TB are encompassed in the LFOSimulator.jar file in lib
+
+src contains the source code
+
+results contain the results from the experiments
+
+raw_data contains the raw_data for the robocup and vacuum cleaner domain
+
+lib contains the libraries
+
+
+
+
