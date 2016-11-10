@@ -1,0 +1,45 @@
+Changes made to the original tool are listed below:
+
+New Classes added:
+
+src/lfo/experiments
+
+-SimModule.java - Runs the LFOFramework - See the how-to.md
+
+-LFOFramework.java - new Framework built on top of old one to accomodate comparison of LFO in multiple domains. Includes a Tester and an Evaluator module that return performance measures on LFO on any (currently only) discrete domain. 
+
+-ReadCsv.java - reads csv
+
+-AutomaticPerformanceEvaluatorRoboCupLFO.java - old tool used to run robocup domain tests (Replaced by LFOFramework.java)
+
+-Simulator.java - old tool used to run AutomaticPerformanceEvaluatorRoboCupLFO.java (replaced by SimModule.java)
+
+src/lfo/agents/cbr
+
+-TBCase.java - an agent that will create one case of a case based agent - for use in Temporal backtracking algorithm
+
+-TBAgent.java - contains all the cases of the TBCase - it extends Agent.
+____________________________________________________________________________________________________________________
+
+Changes made to preexisting code:
+
+src/lfo/agents
+
+-Agents.java - added cycleNew() method which allows for input of a csv or space delimted trace file to be used instead of an xml file.
+
+src/lfo/agents/matlab
+
+Implemented cycleNew() is in all the classes that inherit this method:
+
+-DiscreteDBNAgent.java
+
+-DiscreteBNetAgent.java
+
+-DiscreteNNetAgent.java
+
+-DiscreteNNetOrderkAgent.java
+
+-DiscreteBnetOrderKAgent.java
+___________________________________________________________________________________________________________________
+
+
