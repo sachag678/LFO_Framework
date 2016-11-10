@@ -1,0 +1,14 @@
+Accuracy:0.7518141828472164
+predicted
+_________
+|3092 0 86 |
+|8772 23741 0 |
+|0 0 0 |
+fmeasure:0.4183933217437996,
+
+precision:0.2606203641267701,recall:0.9729389553178099
+precision:1.0,recall:0.7302002276012672
+precision:0.0,recall:0.0
+F-Measure:0.4111155431458583
+F-Measure:0.8440644220855407
+F-Measure:0.0

@@ -1,0 +1,8 @@
+WallFollowerAgent-Accuracy:0.9231428571428572,
+SmartWallFollowerAgent-Accuracy:0.9424285714285714,
+RandomAgent-Accuracy:0.19785714285714287,
+SmartRandomAgent-Accuracy:0.3375714285714286,
+StraightLineAgent-Accuracy:0.4864285714285714,
+SmartStraightLineAgent-Accuracy:0.4977142857142857,
+ZigZagAgent-Accuracy:0.4722857142857143,
+FixedSequenceAgent-Accuracy:0.4004285714285714,

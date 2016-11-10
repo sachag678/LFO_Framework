@@ -1,0 +1,11 @@
+
+precision:0.09937106918238994,recall:0.8681318681318682
+F-Measure:0.17832957110609482
+precision:1.0,recall:0.7541417395306028
+F-Measure:0.8598412802518528
+precision:0.4,recall:0.6857142857142857
+F-Measure:0.5052631578947367
+precision:null,recall:null
+F-Measure:null
+precision:null,recall:null
+F-Measure:null

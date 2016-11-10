@@ -1,0 +1,8 @@
+WallFollowerAgent-fmeasure:0.7371693610695862,
+SmartWallFollowerAgent-fmeasure:0.7453066418974992,
+RandomAgent-fmeasure:0.1969195647542818,
+SmartRandomAgent-fmeasure:0.27293800844089244,
+StraightLineAgent-fmeasure:0.5819933416690286,
+SmartStraightLineAgent-fmeasure:0.5767615675485737,
+ZigZagAgent-fmeasure:0.5025966801509185,
+FixedSequenceAgent-fmeasure:0.36674443436119725,
