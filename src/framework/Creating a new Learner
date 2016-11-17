@@ -6,6 +6,9 @@ Agent should have a constructor that at minimum takes in the trace files to perf
 perceptions.  
 
 Agent has a method called String cycleNew(String [] actions, List<Double> Perceptions, int timestep) which should be implemented.
-It returns the predicted action as a String. This method will contain the decision making.
+The actions are the actions available to the learner, the perceptions are the current perceptions and the timestep is the current 
+time. Some learners don't use all the parameters but to make it as general as possible, the method requires all 3. 
+The method returns the predicted action as a String and it should contain the decision making.
 
-Once this is done, a case has to be added to the switch statement in the Leaner.java file.
+Once this is done, a case has to be added to the switch statement in the Leaner.java file so that it can be selected as an option
+in the simulatorModule.java
