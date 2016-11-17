@@ -1,0 +1,11 @@
+In order to create a new Learner the following steps must be taken:
+
+The learner must extend Agent.
+
+Agent should have a constructor that at minimum takes in the trace files to perform learning. It can also take in the number of 
+perceptions.  
+
+Agent has a method called String cycleNew(String [] actions, List<Double> Perceptions, int timestep) which should be implemented.
+It returns the predicted action as a String. This method will contain the decision making.
+
+Once this is done, a case has to be added to the switch statement in the Leaner.java file.
