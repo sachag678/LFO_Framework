@@ -24,10 +24,10 @@ public class SimulatorModule {
 			//gather trace data
 			List <String> data = new ArrayList<String>();
 			
-			for(int i=1;i<3;i++){
+			for(int i=0;i<10;i++){
 				//data.add("C:/Users/sachagunaratne/workspace2/LFOSimulation/workspace/LFOsimulator/traces-fourraydistance/Traces-for-dataset" + j + "/trace-m" + i + "-FixedSequenceAgent.txt");
 				// data.add("RoboCup/Dataset5/log_toggle"+ i +".csv");
-				data.add("C:/Users/sachagunaratne/workspace2/LFOSimulation/workspace/LFOsimulator/RoboCup/Dataset" + j + "/C_" + i + ".csv");
+				data.add("C:/Users/sachagunaratne/workspace2/LFOSimulation/workspace/LFOsimulator/Raw_data/RoboCup/Dataset" + j + "/C_" + i + ".csv");
 			}
 
 			// data.add("C:/Users/sachagunaratne/workspace2/LFOSimulation/workspace/LFOsimulator/RoboCup/Dataset" + j + "/Test_data.csv");
@@ -43,7 +43,7 @@ public class SimulatorModule {
 			String[] actions = {"1","2","3"};
 
 			//location to save output files
-			String outputLocation = "C:/Users/sachagunaratne/workspace2/LFOSimulation/workspace/LFOsimulator/RoboCup_evaluation/";
+			String outputLocation = "C:/Users/sachagunaratne/workspace2/LFOSimulation/workspace/LFOsimulator/";
 
 			//Get confusionMatrix
 			int[][] conMat = test.trainTest(learnerType, data, numPerceptions, actions, splitBy);
@@ -54,6 +54,6 @@ public class SimulatorModule {
 		}
 
 		//output time taken to run experiment
-		test.printTime(ttt);
+		test.printTime(ttt, true);
 	}
 }

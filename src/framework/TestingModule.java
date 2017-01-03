@@ -28,6 +28,7 @@ public class TestingModule {
 	public int[][] trainTest(String learnerType, List <String> trainData, int NumPerception, String[] actions, String splitBy) throws IOException{
 		//create new reading object
 		ReadCsv read = new ReadCsv();
+		Learner l = new Learner();
 
 		//output matrix
 		int [][] conMat = new int [actions.length][actions.length];
@@ -45,10 +46,10 @@ public class TestingModule {
 			double t = System.currentTimeMillis();	
 
 			//gets new learner
-			Agent agent = new Learner(i,learnerType, trainData,NumPerception, actions, splitBy);
+			Agent agent = l.newAgent(i,learnerType, trainData,NumPerception, actions, splitBy);
 
 			//calculate training time and convert into min
-			printTime(t);
+			printTime(t,false);
 
 			//get start testing time
 			t = System.currentTimeMillis();
@@ -105,7 +106,7 @@ public class TestingModule {
 			}
 
 			//calculate testing time and convert into minutes
-			printTime(t);
+			printTime(t,true);
 		}
 		//get the output
 		conMat = GetConfusionMatrix(matrix);
@@ -156,11 +157,12 @@ public class TestingModule {
 		return matrix;
 	}
 
-	public void printTime(double t){
+	public void printTime(double t, boolean test){
 		double t2;
 		t2 = (System.currentTimeMillis() - t);
 		t2 = t2/60000; //convert to minutes
-		System.out.print("Training complete in: "+ t+ " min");
+		if(!test)System.out.print("Training complete in: "+ t+ " min");
+		else System.out.print("Testing complete in: "+ t+ " min");
 		System.out.print("\r\n");
 	}
 	
