@@ -4,8 +4,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import lfo.experiments.LFOFramework;
-
 public class SimulatorModule {
 
 	public static void main(String[] args) throws IOException{
@@ -24,7 +22,7 @@ public class SimulatorModule {
 			//gather trace data
 			List <String> data = new ArrayList<String>();
 			
-			for(int i=0;i<10;i++){
+			for(int i=0;i<2;i++){
 				//data.add("C:/Users/sachagunaratne/workspace2/LFOSimulation/workspace/LFOsimulator/traces-fourraydistance/Traces-for-dataset" + j + "/trace-m" + i + "-FixedSequenceAgent.txt");
 				// data.add("RoboCup/Dataset5/log_toggle"+ i +".csv");
 				data.add("C:/Users/sachagunaratne/workspace2/LFOSimulation/workspace/LFOsimulator/Raw_data/RoboCup/Dataset" + j + "/C_" + i + ".csv");
