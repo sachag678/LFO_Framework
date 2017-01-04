@@ -48,12 +48,12 @@ public class Learner extends Agent {
 		case "IOHMM":
 			lt.addAll(trainData);
 			lt.remove(i);
-			agent = DiscreteDBNAgent.getIOHMMFromMATLAB(lt,Config.LOCAL_MAP + "Matlab/LfODBN-EVAL_IOHMM",NumPerception, (NumPerception+2)*2);
+			agent = DiscreteDBNAgent.getIOHMMFromMATLAB(lt,Config.LOCAL_DATA + "Matlab/LfODBN-EVAL_IOHMM",NumPerception, (NumPerception+2)*2);
 			break;
 		case "DBN":
 			lt.addAll(trainData);
 			lt.remove(i);
-			agent = DiscreteDBNAgent.getLfODBNFromMATLAB(lt,Config.LOCAL_MAP + "Matlab/LfODBN-EVAL_DBN",NumPerception,(NumPerception+2)*2);
+			agent = DiscreteDBNAgent.getLfODBNFromMATLAB(lt,Config.LOCAL_DATA + "Matlab/LfODBN-EVAL_DBN",NumPerception,(NumPerception+2)*2);
 			break;
 		case "TB":
 			lt.addAll(trainData);
