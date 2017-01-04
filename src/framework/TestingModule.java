@@ -1,7 +1,5 @@
 package framework;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -9,15 +7,10 @@ import java.util.HashSet;
 import java.util.List;
 
 import lfo.agents.Agent;
-import lfo.agents.cbr.TBCase;
-import lfo.agents.cbr.*;
-import lfo.agents.matlab.DiscreteBNetAgent;
 import lfo.agents.matlab.DiscreteBNetOrderKAgent;
 import lfo.agents.matlab.DiscreteDBNAgent;
-import lfo.agents.matlab.DiscreteNNetAgent;
 import lfo.agents.matlab.DiscreteNNetOrderKAgent;
-import lfo.experiments.Config;
-import lfo.experiments.ReadCsv;
+import util.ReadCsv;
 import lfo.matlab.BNetRemoteDiscrete;
 import lfo.matlab.BNetRemoteOrderKDiscrete;
 import lfo.matlab.NNetRemote;

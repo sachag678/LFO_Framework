@@ -12,7 +12,7 @@ import lfo.agents.matlab.DiscreteBNetOrderKAgent;
 import lfo.agents.matlab.DiscreteDBNAgent;
 import lfo.agents.matlab.DiscreteNNetAgent;
 import lfo.agents.matlab.DiscreteNNetOrderKAgent;
-import lfo.experiments.Config;
+import util.Config;
 
 public class Learner extends Agent {
 	
