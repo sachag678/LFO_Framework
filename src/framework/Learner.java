@@ -14,6 +14,7 @@ import lfo.agents.matlab.DiscreteNNetAgent;
 import lfo.agents.matlab.DiscreteNNetOrderKAgent;
 import util.Config;
 
+
 public class Learner extends Agent {
 	
 	public Agent newAgent(int ignoreTrace, String learnerType, List<String> trainData, int NumPerception, String[] actions, String splitBy ) throws FileNotFoundException, IOException{
