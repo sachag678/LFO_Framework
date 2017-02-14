@@ -7,6 +7,7 @@ import java.util.HashSet;
 import java.util.List;
 
 import lfo.agents.Agent;
+import lfo.agents.matlab.ContinuousDBNAgent;
 import lfo.agents.matlab.DiscreteBNetOrderKAgent;
 import lfo.agents.matlab.DiscreteDBNAgent;
 import lfo.agents.matlab.DiscreteNNetOrderKAgent;
@@ -84,6 +85,7 @@ public class TestingModule {
 				if (agent instanceof DiscreteNNetOrderKAgent) ((DiscreteNNetOrderKAgent)agent).replaceLastActionNew(actions, actionExpert);
 				if (agent instanceof DiscreteBNetOrderKAgent) ((DiscreteBNetOrderKAgent)agent).replaceLastActionNew(actions, actionExpert);
 				if (agent instanceof DiscreteDBNAgent & learnerType.equals("DBN")) ((DiscreteDBNAgent)agent).replaceLastAction(actions, actionExpert);
+				if (agent instanceof ContinuousDBNAgent) ((ContinuousDBNAgent)agent).replaceLastAction(actionExpert);
 
 				//comparing the actions to generate the confusionMatrix
 				String correct = (actionExpert.equals("0")) ? "NOACTION" : actionExpert;

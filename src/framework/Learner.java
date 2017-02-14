@@ -7,6 +7,7 @@ import java.util.List;
 
 import lfo.agents.Agent;
 import lfo.agents.cbr.TBAgent;
+import lfo.agents.matlab.ContinuousDBNAgent;
 import lfo.agents.matlab.DiscreteBNetAgent;
 import lfo.agents.matlab.DiscreteBNetOrderKAgent;
 import lfo.agents.matlab.DiscreteDBNAgent;
@@ -60,6 +61,10 @@ public class Learner extends Agent {
 			lt.addAll(trainData);
 			agent = new TBAgent(lt,splitBy,i);
 			break;
+		case "CDBN":
+			lt.addAll(trainData);
+			lt.remove(i);
+			agent = new ContinuousDBNAgent(lt,NumPerception,(NumPerception+2)*2);
 		}
 		
 		return agent;
