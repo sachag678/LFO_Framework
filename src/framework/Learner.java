@@ -6,15 +6,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 import lfo.agents.Agent;
-import lfo.agents.cbr.TBAgent;
-import lfo.agents.matlab.ContinuousDBNAgent;
+import lfo.agents.cbr.*;
 import lfo.agents.matlab.DiscreteBNetAgent;
 import lfo.agents.matlab.DiscreteBNetOrderKAgent;
 import lfo.agents.matlab.DiscreteDBNAgent;
 import lfo.agents.matlab.DiscreteNNetAgent;
 import lfo.agents.matlab.DiscreteNNetOrderKAgent;
 import util.Config;
-
+import lfo.agents.matlab.*;
 
 public class Learner extends Agent {
 	
@@ -50,12 +49,13 @@ public class Learner extends Agent {
 		case "IOHMM":
 			lt.addAll(trainData);
 			lt.remove(i);
-			agent = DiscreteDBNAgent.getIOHMMFromMATLAB(lt,Config.LOCAL_DATA + "Matlab/LfODBN-EVAL_IOHMM",NumPerception, (NumPerception+2)*2);
+			agent = DiscreteDBNAgent.getIOHMMFromMATLAB(lt,Config.LOCAL_DATA + "Results/RoboCup_evaluation/Dataset2/LfODBN-EVAL_IOHMM",NumPerception, (NumPerception+2)*2);
 			break;
 		case "DBN":
 			lt.addAll(trainData);
 			lt.remove(i);
-			agent = DiscreteDBNAgent.getLfODBNFromMATLAB(lt,Config.LOCAL_DATA + "Matlab/LfODBN-EVAL_DBN",NumPerception,(NumPerception+2)*2);
+			//agent = DiscreteDBNAgent.getLfODBNFromMATLAB(lt,Config.LOCAL_MAP + "Matlab/LfODBN-EVAL_DBN",NumPerception,(NumPerception+2)*2);
+			agent = DiscreteDBNAgent.CreateDiscreteDBNAgent(Config.LOCAL_DATA + "Results/RoboCup_evaluation/Dataset2/LfODBN-EVAL_DBN");
 			break;
 		case "TB":
 			lt.addAll(trainData);
@@ -65,6 +65,9 @@ public class Learner extends Agent {
 			lt.addAll(trainData);
 			lt.remove(i);
 			agent = new ContinuousDBNAgent(lt,NumPerception,(NumPerception+2)*2);
+		case "CBR":
+			lt.addAll(trainData);
+			agent = new RetrievalAgent(lt,splitBy,i);
 		}
 		
 		return agent;

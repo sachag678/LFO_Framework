@@ -16,8 +16,8 @@ public class SimulatorModule {
 		for(int j = 1;j<2;j++){
 
 			//---------------Experiment Setup--------------------------------------------------------------------------------------
-			//type of learner (BN,NN,NNk2,BNk2,IOHMM,DBN,TB, CDBN)
-			String learnerType = "TB";
+			//type of learner (BN,NN,NNk2,BNk2,IOHMM,DBN,TB, CDBN, CBR)
+			String learnerType = "CBR";
 
 			//gather trace data
 			List <String> data = new ArrayList<String>();
