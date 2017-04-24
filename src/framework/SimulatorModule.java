@@ -23,10 +23,10 @@ public class SimulatorModule {
 			List <String> data = new ArrayList<String>();
 			
 			for (int k = 1;k<2;k++){
-				for(int i=1;i<3;i++){
+				for(int i=0;i<10;i++){
 					//data.add("C:/Users/sachagunaratne/workspace2/LFOSimulation/workspace/LFOsimulator/traces-fourraydistance/Traces-for-dataset" + j + "/trace-m" + i + "-FixedSequenceAgent.txt");
-					 data.add("Raw_data/ObstacleAvoidance/toggle"+ i +".csv");
-					//data.add("C:/Users/sachagunaratne/workspace2/LFOSimulation/workspace/LFOsimulator/Raw_data/RoboCup/Dataset" + k + "/C_" + i + ".csv");
+					 //data.add("Raw_data/ObstacleAvoidance/toggle"+ i +".csv");
+					data.add("Raw_data/RoboCup/Dataset" + k + "/C_" + i + ".csv");
 				}
 			}
 
@@ -40,10 +40,10 @@ public class SimulatorModule {
 			int numPerceptions = 3;
 
 			//actions
-			String[] actions = {"1","2","3","4","5"};
+			String[] actions = {"1","2","3"};
 
 			//location to save output files
-			String outputLocation = "Results/Obstacle-avoidance/";
+			String outputLocation = "Results/RoboCup_evaluation/Dataset1/";
 
 			//Get confusionMatrix
 			int[][] conMat = test.trainTest(learnerType, data, numPerceptions, actions, splitBy);
