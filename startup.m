@@ -1,3 +1,4 @@
-addpath(genpath('C:\Users\sachagunaratne\workspace2\LFOSimulation\workspace\LFOsimulator')) 
-javaaddpath('C:\Users\sachagunaratne\workspace2\LFOFramework\lib\LFOSimulator.jar')
-addpath(genpath('C:\Users\sachagunaratne\workspace2\LFOFramework'))
+addpath(genpath('E:\workspace2\LFOSimulation\workspace\LFOsimulator\Matlab2'))
+addpath(genpath('E:\workspace2\LFOSimulation\workspace\LFOsimulator\bnt-master')) 
+javaaddpath('C:\Users\me\Documents\GitHub\LFO_Framework\lib\LFOSimulator.jar')
+addpath(genpath('C:\Users\me\Documents\GitHub\LFO_Framework'))
