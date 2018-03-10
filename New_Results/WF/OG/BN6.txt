@@ -1,0 +1,17 @@
+Accuracy:1.0
+predicted
+_________
+|255 0 0 0 |
+|0 265 0 0 |
+|0 0 240 0 |
+|0 0 0 240 |
+fmeasure:1.0,
+
+precision:1.0,recall:1.0
+precision:1.0,recall:1.0
+precision:1.0,recall:1.0
+precision:1.0,recall:1.0
+F-Measure:1.0
+F-Measure:1.0
+F-Measure:1.0
+F-Measure:1.0
