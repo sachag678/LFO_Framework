@@ -54,8 +54,8 @@ public class Learner extends Agent {
 		case "DBN":
 			lt.addAll(trainData);
 			lt.remove(i);
-			//agent = DiscreteDBNAgent.getLfODBNFromMATLAB(lt,Config.LOCAL_MAP + "Matlab/LfODBN-EVAL_DBN",NumPerception,(NumPerception+2)*2);
-			agent = DiscreteDBNAgent.CreateDiscreteDBNAgent(Config.LOCAL_DATA + "Results/RoboCup_evaluation/Dataset2/LfODBN-EVAL_DBN");
+			agent = DiscreteDBNAgent.getLfODBNFromMATLAB(lt,Config.LOCAL_DATA + "Matlab/LfODBN-EVAL_DBN",NumPerception,(NumPerception+2)*2);
+			//agent = DiscreteDBNAgent.CreateDiscreteDBNAgent(Config.LOCAL_DATA + "Results/RoboCup_evaluation/Dataset2/LfODBN-EVAL_DBN");
 			break;
 		case "TB":
 			lt.addAll(trainData);

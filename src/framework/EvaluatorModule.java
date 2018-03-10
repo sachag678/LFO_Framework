@@ -87,6 +87,41 @@ public class EvaluatorModule {
 
 	}
 	
+	public double getF1Global(int[][] conMat){
+		//new arrays to hold Precision and Recall and F-Measure----------------
+				Double [] precision = new Double [conMat.length];
+				Double [] recall = new Double [conMat.length];
+				Double [] fmeasure = new Double [conMat.length];
+				//-------------------------------------------------------
+
+				double avg_fmeasure =0;
+
+				for(int i1=0;i1<conMat.length;i1++){
+					//checking for divide by zero
+					if(sumOfCol(conMat,i1)!=0){
+						precision[i1] = (double) (conMat[i1][i1])/sumOfCol(conMat,i1);
+					}else{
+						precision[i1] = 0.0;
+					}
+					if(sumOfRow(conMat,i1)!=0){
+						recall[i1] = (double) (conMat[i1][i1])/sumOfRow(conMat,i1);
+					} else{
+						recall[i1] = 0.0;
+					}
+
+					if(precision[i1]!=0 && recall[i1]!=0){
+						fmeasure[i1] = (2*precision[i1]*recall[i1])/(precision[i1]+recall[i1]);
+					}else{
+						fmeasure[i1] = 0.0;
+					}
+					avg_fmeasure += fmeasure[i1];
+				}
+				
+				avg_fmeasure = avg_fmeasure/conMat.length;
+				
+				return avg_fmeasure;
+	}
+	
 	public double getAccuracy(int[][] conMat){
 		double total = 0;
 		double tp = 0;
